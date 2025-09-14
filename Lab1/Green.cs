@@ -1,4 +1,4 @@
-﻿namespace Lab1
+namespace Lab1
 {
     public class Green
     {
@@ -7,7 +7,7 @@
             bool answer = false;
 
             // code here
-
+            if (Math.Abs(d) >= 1) answer = true;
             // end
 
             return answer;
@@ -17,7 +17,7 @@
             bool answer = false;
 
             // code here
-
+            if (((d + f) / 2) > 0) answer = true;
             // end
 
             return answer;
@@ -27,7 +27,7 @@
             bool answer = false;
 
             // code here
-
+            if ((a + b) > ((Math.Abs(a)  + Math.Abs(b)) / 2)) answer = true;
             // end
 
             return answer;
@@ -37,7 +37,7 @@
             int answer = 0;
 
             // code here
-
+            answer = Math.Max(Math.Max(a, b), c);
             // end
 
             return answer;
@@ -47,7 +47,8 @@
             double answer = 0;
 
             // code here
-
+            if (Math.Abs(x) > 1) answer = 0;
+            if (Math.Abs(x) <= 1) answer = (x * x - 1);
             // end
 
             return answer;
@@ -57,7 +58,7 @@
             bool answer = false;
 
             // code here
-
+            if (x >= -1 && x <= 1 && y >= 0 && y <= 1 - Math.Abs(x)) answer = true;
             // end
 
             return answer;
@@ -68,17 +69,19 @@
             bool answer = true;
 
             // code here
+            if (n < 0) answer = false;
+            else if (n % 2 == 0) answer = false;
+                // end
 
-            // end
-
-            return answer;
+                return answer;
         }
         public bool Task8(int X, int Y)
         {
             bool answer = false;
 
             // code here
-
+            int teadays = (X + 1) / 2;
+            if (X >= 7) if ((teadays * Y) >= 240 && (teadays * Y) <= 360) answer = true;
             // end
 
             return answer;
